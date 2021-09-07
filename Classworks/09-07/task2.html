@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis 2</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        main {
+            background-color: white;
+            padding: 10px, 10px;
+        }
+        .box {
+            background-color: lightgrey;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        section {
+            text-align: center;
+            padding-left: 100px !important;
+            padding-right: 100px !important;
+        }
+        .article {
+            display: inline-block;
+            width: 49%;
+        }
+        ol {
+            text-align: right;
+        }
+        ol > li {
+            display: inline-block;
+        }
+        button {
+            text-wrap: none;
+        }
+        nav {
+            display: inline-block;
+            text-align: right;
+            width: 49%;
+        }
+        footer {
+            text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .inline {
+            display: inline-block;
+        }
+        .logo {
+            width: 49%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="box">
+            <div class="inline logo">
+                <strong>LOGO</strong>
+            </div>
+            <nav class="inline">
+                <ol class="inline">
+                    <li>
+                        <button>
+                        Menu Item 1
+                        </button></li>
+                    <li>
+                        <button>
+                        Menu Item 2
+                        </button></li>
+                    <li>
+                        <button>
+                        Menu Item 3
+                        </button></li>
+                </ol>
+            </nav>
+        </header>
+        <section class="box">
+            <header class="centered">SUPER HEADLINE</header>
+            <p class="centered">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Accusamus illo laudantium porro
+                quibusdam quisquam ut?
+            </p>
+        </section>
+        <article class="box">
+            <div class="article">
+                <header>Headline</header>
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Accusamus illo laudantium porro
+                    quibusdam quisquam ut? Accusamus
+                    consectetur cumque et maxime omnis, quis soluta.
+                    Architecto, blanditiis nesciunt nobis non
+                    repudiandae tenetur.
+                </p>
+            </div>
+            <img src="https://via.placeholder.com/250x150" alt="image">
+        </article>
+        <article class="box">
+            <img src="https://via.placeholder.com/250x150" alt="image">
+            <div class="article">
+                <header>Headline</header>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+        </article>
+        <footer class="box">
+            <span>Additional Information 1</span>
+            <span>Additional Information 2</span>
+            <span>Additional Information 3</span>
+            <br>
+            <span>All Rights resered</span>
+        </footer>
+    </main>
+</body>
+</html>
