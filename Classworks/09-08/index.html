@@ -7,29 +7,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        form > label, input, button {
-            display: block;
-        }
-        .subscribe {
+        label, input {
             display: inline;
+        }
+        label {
+            width: 150px;
+        }
+        .row {
+            display: inline-block;
+            width: 150px;
         }
     </style>
 </head>
 <body>
-    <form method="post">
-        <label for="name">Your name:</label>
-        <input type="text" id="name">
-        <label for="age">How old are you?</label>
-        <input type="number" id="age">
-        <label for="address">What is your address?</label>
-        <input type="text" id="address">
-        <label for="email">Your email address:</label>
-        <input type="email" id="email">
-        <label for="pswd">Password:</label>
-        <input type="password" id="pswd">
-        <label class="subscribe" for="subscribe">Would you like to subscribe to our newsletter?</label>
-        <input class="subscribe" type="checkbox" id="subscribe">
-        <button type="submit">Done</button>
-    </form>
+    <div class="container">
+        <form method="post" autocomplete="off">
+            <div>
+                <div class="row">
+                    <label for="name">Your name:</label>
+                </div>
+                <div class="row">
+                    <input type="text" id="name">
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <label for="age">How old are you?</label>
+                </div>
+                <div class="row">
+                    <input type="number" id="age">
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <label for="address">What is your address?</label>
+                </div>
+                <div class="row">
+                    <input type="text" id="address">
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <label for="email">Your email address:</label>
+                </div>
+                <div class="row">
+                    <input type="email" id="email">
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <label for="pswd">Password:</label>
+                </div>
+                <div class="row">
+                    <input type="password" id="pswd">
+                </div>
+            </div>
+            <div>
+                <div class="subscribe">
+                    <span>Would you like to subscribe to our newsletter?</span>
+                </div>
+                <div class="row">
+                    <label for="yes">Yes</label>
+                    <input class="subscribe" type="radio" name="news" id="yes" value="1" checked="checked">
+                </div>
+                <div class="row">
+                    <label for="no">No</label>
+                    <input class="subscribe" type="radio" name="news" id="no" value="0">
+                </div>
+            </div>
+            <button type="submit">Done</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <form>
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </form>
+    </div>
 </body>
 </html>
