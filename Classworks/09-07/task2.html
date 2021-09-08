@@ -5,27 +5,37 @@
     <title>Uzduotis 2</title>
     <style>
         body {
-            background-color: lightgrey;
+            background-color: #f8f8f8;
         }
         main {
             background-color: white;
-            padding: 10px, 10px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 25%;
+            margin-right: 25%;
+            justify-content: ;
         }
         .box {
-            background-color: lightgrey;
-            margin-left: 150px;
-            margin-right: 150px;
+            background-color: #f8f8f8;
+            margin-left: 15px;
+            margin-right: 15px;
             margin-top: 10px;
             padding: 10px;
         }
         section {
             text-align: center;
-            padding-left: 100px !important;
-            padding-right: 100px !important;
+            margin-left: 20%;
+            margin-right: 20%;
+            font-family: "Gill Sans MT";
+        }
+        .section {
+            margin-left: 25%;
+            margin-right: 25%;
         }
         .article {
-            display: inline-block;
-            width: 49%;
+            display: flex;
+            justify-content: space-around;
+            font-family: "Gill Sans MT";
         }
         ol {
             text-align: right;
@@ -33,89 +43,125 @@
         ol > li {
             display: inline-block;
         }
-        button {
-            text-wrap: none;
-        }
         nav {
-            display: inline-block;
-            text-align: right;
-            width: 49%;
-        }
-        footer {
-            text-align: center;
-            padding-left: 100px;
-            padding-right: 100px;
-        }
-        .inline {
-            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            font-family: "Lucida Console";
         }
         .logo {
-            width: 49%;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .navbutton {
+            border: none;
+            background-color: #f8f8f8;
+            font-family: "Gill Sans MT";
+        }
+        footer {
+            margin-bottom: 10px;
+            font-family: "Gill Sans MT";
+            justify-content: space-evenly;
+        }
+        .footertop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .footerbottom {
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
 </head>
 <body>
-    <main>
+    <main class="container">
+
+<!--        NAVIGATION-->
+
         <header class="box">
-            <div class="inline logo">
-                <strong>LOGO</strong>
-            </div>
-            <nav class="inline">
-                <ol class="inline">
+            <nav>
+                <div class="logo">LOGO</div>
+                <ol>
                     <li>
-                        <button>
+                        <button class="navbutton">
                         Menu Item 1
                         </button></li>
                     <li>
-                        <button>
+                        <button class="navbutton">
                         Menu Item 2
                         </button></li>
                     <li>
-                        <button>
+                        <button class="navbutton">
                         Menu Item 3
                         </button></li>
                 </ol>
             </nav>
         </header>
+
+<!--        SECTION-->
+
         <section class="box">
-            <header class="centered">SUPER HEADLINE</header>
-            <p class="centered">Lorem ipsum dolor sit amet,
+            <header>SUPER HEADLINE</header>
+            <p class="section">Lorem ipsum dolor sit amet,
                 consectetur adipisicing elit.
                 Accusamus illo laudantium porro
                 quibusdam quisquam ut?
             </p>
         </section>
+
+<!--        ARTICLE 1-->
+
         <article class="box">
             <div class="article">
-                <header>Headline</header>
-                <p>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Accusamus illo laudantium porro
-                    quibusdam quisquam ut? Accusamus
-                    consectetur cumque et maxime omnis, quis soluta.
-                    Architecto, blanditiis nesciunt nobis non
-                    repudiandae tenetur.
-                </p>
+                <div>
+                    <header>Headline</header>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Accusamus illo laudantium porro
+                        quibusdam quisquam ut? Accusamus
+                        consectetur cumque et maxime omnis, quis soluta.
+                        Architecto, blanditiis nesciunt nobis non
+                        repudiandae tenetur.
+                    </p>
+                </div>
+                <img src="https://via.placeholder.com/250x150" alt="image">
             </div>
-            <img src="https://via.placeholder.com/250x150" alt="image">
+
         </article>
+
+<!--        ARTICLE 2-->
+
         <article class="box">
-            <img src="https://via.placeholder.com/250x150" alt="image">
             <div class="article">
-                <header>Headline</header>
-                <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
+                <img src="https://via.placeholder.com/250x150" alt="image">
+                <div>
+                    <header>Headline</header>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
             </div>
         </article>
+
+<!--        FOOTER-->
+
         <footer class="box">
-            <span>Additional Information 1</span>
-            <span>Additional Information 2</span>
-            <span>Additional Information 3</span>
-            <br>
-            <span>All Rights resered</span>
+            <div class="footertop">
+                <span>Additional Information 1</span>
+                <span>Additional Information 2</span>
+                <span>Additional Information 3</span>
+            </div>
+            <div class="footerbottom">
+                <p>All Rights resered</p>
+            </div>
         </footer>
     </main>
 </body>
