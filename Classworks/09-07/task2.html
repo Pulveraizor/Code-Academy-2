@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uzduotis 2</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+        main {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin-left: 25%;
+            margin-right: 25%;
+            justify-content: ;
+        }
+        .box {
+            background-color: #f8f8f8;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        section {
+            text-align: center;
+            margin-left: 20%;
+            margin-right: 20%;
+            font-family: "Gill Sans MT";
+        }
+        .section {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .article {
+            display: flex;
+            justify-content: space-around;
+            font-family: "Gill Sans MT";
+        }
+        ol {
+            text-align: right;
+        }
+        ol > li {
+            display: inline-block;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            font-family: "Lucida Console";
+        }
+        .logo {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .navbutton {
+            border: none;
+            background-color: #f8f8f8;
+            font-family: "Gill Sans MT";
+        }
+        footer {
+            margin-bottom: 10px;
+            font-family: "Gill Sans MT";
+            justify-content: space-evenly;
+        }
+        .footertop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .footerbottom {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+
+<!--        NAVIGATION-->
+
+        <header class="box">
+            <nav>
+                <div class="logo">LOGO</div>
+                <ol>
+                    <li>
+                        <button class="navbutton">
+                        Menu Item 1
+                        </button></li>
+                    <li>
+                        <button class="navbutton">
+                        Menu Item 2
+                        </button></li>
+                    <li>
+                        <button class="navbutton">
+                        Menu Item 3
+                        </button></li>
+                </ol>
+            </nav>
+        </header>
+
+<!--        SECTION-->
+
+        <section class="box">
+            <header>SUPER HEADLINE</header>
+            <p class="section">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Accusamus illo laudantium porro
+                quibusdam quisquam ut?
+            </p>
+        </section>
+
+<!--        ARTICLE 1-->
+
+        <article class="box">
+            <div class="article">
+                <div>
+                    <header>Headline</header>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Accusamus illo laudantium porro
+                        quibusdam quisquam ut? Accusamus
+                        consectetur cumque et maxime omnis, quis soluta.
+                        Architecto, blanditiis nesciunt nobis non
+                        repudiandae tenetur.
+                    </p>
+                </div>
+                <img src="https://via.placeholder.com/250x150" alt="image">
+            </div>
+
+        </article>
+
+<!--        ARTICLE 2-->
+
+        <article class="box">
+            <div class="article">
+                <img src="https://via.placeholder.com/250x150" alt="image">
+                <div>
+                    <header>Headline</header>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+<!--        FOOTER-->
+
+        <footer class="box">
+            <div class="footertop">
+                <span>Additional Information 1</span>
+                <span>Additional Information 2</span>
+                <span>Additional Information 3</span>
+            </div>
+            <div class="footerbottom">
+                <p>All Rights resered</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
