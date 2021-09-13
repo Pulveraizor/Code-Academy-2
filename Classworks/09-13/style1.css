@@ -1,0 +1,34 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: rebeccapurple;
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-bottom: 4px;
+}
+.background-blue {
+    background-color: blue;
+}
+#background-orange {
+    background-color: orange;
+}
+.border-dashed {
+    border: 5px dashed red;
+}
+[data-id="10234"] {
+    background-color: black;
+}
+input {
+    border;
+}
+input:checked {
+    height: 24px;
+    width: 24px;
+    background-color: red;
+}
+p {
+    background-color: green;
+}
+div:hover {
+    background-color: aqua;
+}
