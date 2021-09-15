@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+header > div {
+    height: 10vh;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: orange;
+}
+.banner {
+    height: 15vh;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: lawngreen;
+}
+.post {
+    height: 17vh;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: royalblue;
+}
+.ad {
+    height: 8vh;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: darkgrey;
+}
+@media only screen and (min-width: 768px) {
+    .banner {
+        height: 30vh;
+    }
+    .post {
+        height: 8vh;
+    }
+    .ad {
+        display: inline-block;
+        width: 49%;
+    }
+    .adbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 15vh;
+        margin-bottom: 5px;
+    }
+    header > div {
+        height: 15vh;
+        display: inline-block;
+        width: 49%;
+    }
+    .banner {
+        height: 35vh;
+    }
+    .post {
+        display: inline-block;
+        height: 17vh;
+        width: 32%;
+    }
+    .postbox {
+        display: flex;
+        justify-content: space-between;
+        height: 17vh;
+        margin-bottom: 5px;
+    }
+    .ad {
+        display: inline-block;
+        width: 23%;
+    }
+    .adbox {
+        display: flex;
+        justify-content: space-between;
+    }
+}
