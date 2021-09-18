@@ -20,11 +20,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
 }
-.logo {
-    display: inline-block;
-    /*width: 150px;*/
-    /*height: 55px;*/
-}
 div.logo > img {
     width: 150px;
 }
