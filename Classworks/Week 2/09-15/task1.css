@@ -36,7 +36,7 @@ header > div {
     }
     .ad {
         display: inline-block;
-        width: 49%;
+        width: 49.7%;
     }
     .adbox {
         display: flex;
@@ -54,7 +54,7 @@ header > div {
     header > div {
         height: 15vh;
         display: inline-block;
-        width: 49%;
+        width: 49.8%;
     }
     .banner {
         height: 35vh;
@@ -62,7 +62,7 @@ header > div {
     .post {
         display: inline-block;
         height: 17vh;
-        width: 32%;
+        width: 33.1%;
     }
     .postbox {
         display: flex;
@@ -72,7 +72,7 @@ header > div {
     }
     .ad {
         display: inline-block;
-        width: 23%;
+        width: 24.6%;
     }
     .adbox {
         display: flex;
