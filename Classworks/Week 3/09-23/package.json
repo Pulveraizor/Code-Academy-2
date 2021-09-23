@@ -1,0 +1,23 @@
+{
+  "name": "sass-test",
+  "version": "1.0.0",
+  "description": "classwork test",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pulveraizor/Code-Academy-2.git"
+  },
+  "keywords": [
+    "testing",
+    "sass"
+  ],
+  "author": "pulveraizor",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/Pulveraizor/Code-Academy-2/issues"
+  },
+  "homepage": "https://github.com/Pulveraizor/Code-Academy-2#readme"
+}
