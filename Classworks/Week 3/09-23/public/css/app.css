@@ -11290,3 +11290,8 @@ button {
 .bg-secondary {
   background-color: #f4f6fc !important;
 }
+
+.rounded-pill {
+  height: 50px;
+  line-height: 55px;
+}
