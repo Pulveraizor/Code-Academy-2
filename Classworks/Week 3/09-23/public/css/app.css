@@ -11283,6 +11283,10 @@ body {
   color: #303ca5;
 }
 
+button {
+  width: 95%;
+}
+
 .bg-secondary {
   background-color: #f4f6fc !important;
 }
