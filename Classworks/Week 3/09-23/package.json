@@ -4,7 +4,13 @@
   "description": "classwork test",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
   },
   "repository": {
     "type": "git",
@@ -19,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/Pulveraizor/Code-Academy-2/issues"
   },
-  "homepage": "https://github.com/Pulveraizor/Code-Academy-2#readme"
+  "homepage": "https://github.com/Pulveraizor/Code-Academy-2#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.1",
+    "laravel-mix": "^6.0.6"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0"
+  }
 }
