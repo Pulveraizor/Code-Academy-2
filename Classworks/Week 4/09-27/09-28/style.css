@@ -1,0 +1,89 @@
+.container {
+    margin: 3px 3px auto 3px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 8vh) 13vh repeat(3, 20vh) repeat(4, 10vh);
+    grid-template-areas:
+        "header1"
+        "header2"
+        "banner"
+        "post1"
+        "post2"
+        "post3"
+        "ad1"
+        "ad2"
+        "ad3"
+        "ad4"
+    ;
+}
+.header1 {
+    grid-area: header1;
+    background-color: orange;
+}
+.header2 {
+    grid-area: header2;
+    background-color: orange;
+}
+.banner {
+    grid-area: banner;
+    background-color: yellowgreen;
+}
+.post1 {
+    grid-area: post1;
+    background-color: royalblue;
+}
+.post2 {
+    grid-area: post2;
+    background-color: royalblue;
+}
+.post3 {
+    grid-area: post3;
+    background-color: royalblue;
+}
+.ad1 {
+    grid-area: ad1;
+    background-color: lightgray;
+}
+.ad2 {
+    grid-area: ad2;
+    background-color: lightgray;
+}
+.ad3 {
+    grid-area: ad3;
+    background-color: lightgray;
+}
+.ad4 {
+    grid-area: ad4;
+    background-color: lightgray;
+}
+@media only screen and (min-width: 786px) {
+    .container {
+        grid-template-columns: 49% 49%;
+        grid-template-rows: repeat(2, 8vh) 20vh repeat(3, 10vh) repeat(4, 10vh);
+        grid-template-areas:
+        "header1 header1"
+        "header2 header2"
+        "banner banner"
+        "post1 post1"
+        "post2 post2"
+        "post3 post3"
+        "ad1 ad2"
+        "ad3 ad4"
+    ;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(12, 7.8%) ;
+        grid-template-rows: 10vh 25vh 20vh 15vh;
+        grid-template-areas:
+        "header1 header1 header1 header1 header1 header1 header2 header2 header2 header2 header2 header2"
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
+        "post1 post1 post1 post1 post2 post2 post2 post2 post3 post3 post3 post3"
+        "ad1 ad1 ad1 ad2 ad2 ad2 ad3 ad3 ad3 ad4 ad4 ad4"
+    ;
+    }
+}
