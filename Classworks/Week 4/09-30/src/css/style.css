@@ -1,0 +1,133 @@
+.container {
+    font-family: 'MuseoModerno';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+}
+small {
+    color: gray;
+}
+header {
+    flex-direction: column;
+    height: 10%;
+    text-align: center;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15%;
+    margin-top: 5%;
+}
+nav > button {
+    font-family: 'MuseoModerno';
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: red;
+}
+nav > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40px;
+}
+nav > * {
+    height: 40%;
+    align-content: center;
+}
+.filter > * {
+    width: 49%;
+}
+.expanded {
+    flex-direction: column;
+    z-index: 1;
+    display: none;
+}
+.expanded > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+    background-color: red;
+
+}
+.goods {
+    height: 70%;
+    justify-content: space-between;
+}
+.list-item {
+    text-wrap: wrap;
+    border-bottom: solid gray 1px;
+    height: 100%;
+}
+.list-item > * {
+    display: block;
+    width: 100%;
+    padding: 3%;
+    object-fit: cover;
+}
+.description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 510px) {
+    header {
+        height: 5%;
+    }
+    .goods {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .list-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 48%;
+        height: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        margin-left: 20px;
+        margin-rigth: 20px;
+        align-content: center;
+        max-width: 1024px;
+    }
+    header {
+        text-align: left;
+    }
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 10%;
+    }
+    .filter {
+        width: 45%;
+    }
+    .filter > * {
+        width: auto;
+    }
+    .list-item {
+        width: 48%;
+        height: 80%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .list-item {
+        text-align: center;
+        width: 23%;
+        height: 30vh;
+    }
+}
