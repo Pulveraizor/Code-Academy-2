@@ -1,4 +1,4 @@
-function makeParagraph (bgColor, fontColor, content) {
+function makeParagraph (bgColor = 'gray', fontColor = 'white', content = 'Text') {
     let paragraph = document.createElement('p'),
         text = document.createTextNode(content);
     paragraph.appendChild(text);
@@ -10,5 +10,7 @@ makeParagraph('orange', 'gray',
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
     'Asperiores distinctio doloribus');
 
+makeParagraph();
+
 console.assert(document.body.children.length == 1);
-console.assert('p' in document.body.children);
+console.assert(document.getElementsByTagName('p').length >= 1);
