@@ -12,5 +12,5 @@ makeParagraph('orange', 'gray',
 
 makeParagraph();
 
-console.assert(document.body.children.length == 1);
+console.assert(document.body.children.length == 2);
 console.assert(document.getElementsByTagName('p').length >= 1);

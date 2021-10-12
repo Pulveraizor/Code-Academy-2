@@ -1,0 +1,41 @@
+nav {
+    color: gray;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.logo {
+    margin: 15px auto 10px 10px;
+}
+.burger {
+    margin: 15px 10px 10px auto;
+}
+.burger:hover {
+    color: white;
+    cursor: pointer;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+.links {
+    display: none;
+}
+@media only screen and (min-width: 548px) {
+    .burger {
+        display: none;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+    .links > span {
+        margin-right: 10px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
