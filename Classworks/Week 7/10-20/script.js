@@ -35,7 +35,7 @@ console.log(firstInput);
 
 // Paskutinę įvestį (<input>) į formą.
 
-let lastInput = document.querySelector('input:last-of-type');
+let lastInput = document.querySelector('form > input:last-of-type');
 
 console.log(lastInput);
 
