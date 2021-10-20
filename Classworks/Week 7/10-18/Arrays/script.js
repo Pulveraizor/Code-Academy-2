@@ -74,9 +74,10 @@ console.log('lowestHighest', lowestHighest(numbers2));
 let poem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi aspernatur beatae cupiditate doloremque ducimus, enim fuga itaque non obcaecati porro quas quia repellat sapiente ullam unde vel vitae voluptatum?';
 
 function checkForLetters (sentence, symbol) {
-  return sentence.split('').filter(a => a == symbol).length;
+  let result = sentence.split('').filter(a => a == symbol).length;
+  return `Raide '${symbol}' sakinyje buvo rasta ${result} kartus`;
 }
-console.log('checkForLetters', checkForLetters(poem, 'c'));
+console.log('checkForLetters:', checkForLetters(poem, 'c'));
 
 // 9. Parašykite funckiją, kuri ras visus skaičius esančius msyve ir gražins juos kaip atsikrą masyvą. Naujame masyve visi skaičiai bus surikiuoti nuo mažiausio iki didžiausio.
 
