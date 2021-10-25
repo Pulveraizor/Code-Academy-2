@@ -13,8 +13,7 @@
 let main = document.querySelector('#main'),
     headline = document.createElement('h2'),
     paragraph = document.createElement('p'),
-    uList = document.createElement('ul'),
-    listItem = document.createElement('li');
+    uList = document.createElement('ul');
 
 headline.textContent = 'This is H1';
 
