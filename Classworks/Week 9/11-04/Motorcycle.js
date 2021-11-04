@@ -9,7 +9,7 @@ class Motorcycle extends Car {
         } else if (this.wheels == 2) {
             return 'motociklas turi ' + this.wheels + ' ratus';
         } else {
-            return 'Kazkoks ne moticiklas';
+            return 'Kazkoks ne motociklas';
         }
     }
 }
