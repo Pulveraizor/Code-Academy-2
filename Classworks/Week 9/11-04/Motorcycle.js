@@ -4,6 +4,12 @@ class Motorcycle extends Car {
         this.wheels = wheels;
     }
     getWheelsNumber() {
-        return 'motociklas turi ' + this.wheels + ' ratus';
+        if (this.wheels == 3) {
+            return 'motociklas turi ' + this.wheels + ' ratus';
+        } else if (this.wheels == 2) {
+            return 'motociklas turi ' + this.wheels + ' ratus';
+        } else {
+            return 'Kazkoks ne moticiklas';
+        }
     }
 }
