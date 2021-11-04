@@ -17,4 +17,6 @@ console.log(automobile2.getIntroduction());
 console.log(automobile2.getAge());
 
 let bike = new Motorcycle('Kawasaki', 'KX65', 2005, 4);
+console.log(bike.getIntroduction());
+console.log(bike.getAge());
 console.log(bike.getWheelsNumber());
