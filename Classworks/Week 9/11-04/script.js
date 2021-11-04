@@ -15,3 +15,6 @@ let automobile2 = new Car(
 
 console.log(automobile2.getIntroduction());
 console.log(automobile2.getAge());
+
+let bike = new Motorcycle('Kawasaki', 'KX65', 2005, 4);
+console.log(bike.getWheelsNumber());
