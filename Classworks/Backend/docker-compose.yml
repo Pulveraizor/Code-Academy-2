@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+    nginx:
+        image: nginx:1.20.2-alpine
+        container_name: codeacademy-nginx
+        ports:
+            - 8081:80
+        volumes:
+            - ./PHP:/home/code-academy/PHP
+            - ./docker-compose/nginx/conf:/etc/nginx/conf.d/
+            - ./docker-compose/logs/nginx:/home/code-academy/logs
+
+    # docker run -d -t --name php-test-container -v "C:\Users\Ben\Desktop\Code Academy 2\Classworks\Backend\PHP\11-24:/home/app" -w /home/app php:7.4.26-alpine3.14
+    php:
+        image: php:7.4-fpm-alpine3.14
+        container_name: codeacademy-php
+        working_dir: /home/code-academy/PHP
+        # tty: true
+        volumes: 
+            - ./PHP:/home/code-academy/PHP
+            - ./docker-compose/php/conf:/usr/local/etc/php/conf.d

@@ -1,0 +1,3 @@
+docker run -d -t --name php-test-container -v "C:\Users\Ben\Desktop\Code Academy 2\Classworks\Week 12\11-24\PHP\11-24:/home/app" -w /home/app php:7.4.26-alpine3.14
+
+docker exec -it php-test-container /bin/sh
