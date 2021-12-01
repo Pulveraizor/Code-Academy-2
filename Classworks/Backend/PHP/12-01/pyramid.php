@@ -19,7 +19,7 @@ for ($i = 1; $i < 10; $i++) {
 
 //Method 2:
 function createPyramid(...$arg) {
-    foreach ($arg as &$value) {
+    foreach ($arg as $value) {
         echo str_repeat($value, $value), '<br>';
     }
 }
