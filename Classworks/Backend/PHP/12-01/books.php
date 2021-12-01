@@ -35,11 +35,11 @@ $books = [
 
 // Išvesti visus knygų masyvo elementus su var_dump;
 
-// var_dump($books);
+var_dump($books);
 
 // Išvesti visų visų knygų metų vidurkį;
 
-function getAverageAge($arr) {
+function getAverageYear($arr) {
 
     $yearsCollection = [];
 
@@ -48,8 +48,8 @@ function getAverageAge($arr) {
     }
 
     $result = array_sum($yearsCollection)/count($yearsCollection);
-    
-    echo $result;
+
+    echo "The average year of the books is $result";
 }
 
-getAverageAge($books);
+getAverageYear($books);
