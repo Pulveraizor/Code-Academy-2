@@ -26,7 +26,7 @@ $weekDays = [
 
 
 var_dump($weekDays['lt'][1]);
-var_dump($weekDays['en'][2]);
+var_dump($weekDays['en'][3]);
 
 
 $lang = 'lt';
