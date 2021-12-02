@@ -1,7 +1,8 @@
 <?php
 
+$b = 10;
 $a = $b;
 
-var_dump($a);
+echo($a);
 
 echo "Hello World";

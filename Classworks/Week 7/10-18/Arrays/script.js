@@ -150,11 +150,11 @@ let multiplication = (num1, num2) => num1 * num2;
 let division = (num1, num2) => num1 / num2;
 
 function calculateValue(num1, num2, action) {
-  if (isNaN(num1 || num2)) {
+  if (isNaN(num1) || isNaN(num2)) {
     return 'please enter a valid number';
   } else {
     return action(num1, num2);
   }
 }
 
-console.log('calculateValue', calculateValue(5, 3, substraction));
+console.log('calculateValue', calculateValue(5, 6, substraction));

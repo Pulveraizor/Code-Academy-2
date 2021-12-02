@@ -73,6 +73,32 @@ for (i = 1; i <= 3; i ++) {
 let section_1 = document.querySelector('section');
 section_1.classList.add('slider');
 
+// KIRILO
+// let sliderImages = [
+//     'https://divaofthemoment.com/wp-content/uploads/2016/01/slider-home-v5-background.jpg',
+//     'https://i.pinimg.com/originals/0f/34/c5/0f34c5d0796f2c96ec945bfc01365006.jpg',
+//     'https://i.pinimg.com/564x/9d/c1/63/9dc16311b623164894673456d865abc7.jpg',
+// ]
+// for (let key in sliderImages) {
+//     let image = document.createElement('img');
+//     image.style.display = 'none';
+//     image.src = sliderImages[key];
+//     image.id = 'img-' + key;
+//     section_1.appendChild(image);
+// }
+// let imgElements = section_1.querySelectorAll('img');
+// let imgIndex = 0;
+// function slide() {
+//     for (let img of imgElements) {
+//         img.style.display = 'none';
+//     }
+//     let currentIndex = imgIndex++ % imgElements.length;
+//     imgElements[currentIndex].style.display = 'block';
+//     console.log(imgElements[currentIndex]);
+// }
+// setInterval(slide, 2000);
+
+//
 let sliderImages = [
     'https://lh3.googleusercontent.com/proxy/KT5wNwxaR0XCvs_2O2wrusnoMbuoMm209o5eLLShzRKJTXT0f2P5RiNNSZLL91IFNuctvMdg9TJ23DL1e-EMXXqxdciJuoEXuEXtzXETYWNEvOUk9Kzy0b_AoUwjJ5XTsvaowuljzQ',
     'https://divaofthemoment.com/wp-content/uploads/2016/01/slider-home-v5-background.jpg',

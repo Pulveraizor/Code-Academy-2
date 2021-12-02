@@ -15,7 +15,7 @@ let main = document.querySelector('#main'),
     paragraph = document.createElement('p'),
     uList = document.createElement('ul');
 
-headline.textContent = 'This is H1';
+headline.textContent = 'This is H2';
 
 main.appendChild(headline);
 main.appendChild(paragraph);
@@ -24,22 +24,33 @@ let lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blandi
 
 paragraph.textContent = lorem;
 
-function getNewLiElement (tag, link, number) {
-    for (i = 1; i <= number; i++) {
-        let element = document.createElement(tag),
-            image = document.createElement('img');
-        image.src = link;
-        element.appendChild(image);
-        uList.appendChild(element);
+function createNewElement (tag, number, content, appendTo) {
+    if (typeof tag !== 'string') {
+        console.log('The tag has to be a string');
+    } else if (isNaN(number)) {
+        console.log('Please enter a valid number');
+    } else {
+        for (i = 1; i <= number; i++) {
+            let element = document.createElement(tag);
+            if (tag === 'img'){
+                element.src = content;
+            }
+            element.append(content);
+            appendTo.appendChild(element);
+        }
     }
 }
 
+
+
 main.appendChild(uList);
 
-getNewLiElement('li', 'https://via.placeholder.com/140x100', 5);
+createNewElement('img', 5, 'https://via.placeholder.com/140x100', uList);
 
-let paragraph2 = document.createElement('p');
+createNewElement('p', 1, lorem, main);
 
-paragraph2.textContent = lorem;
 
-main.appendChild(paragraph2);
+
+
+
+

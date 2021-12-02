@@ -25,7 +25,7 @@ function appendPosts() {
     tRow.style.border = 'solid black 2px';
     tBody.appendChild(tRow);
 
-    let headers = ['id', 'userId', 'title', 'body'];
+    let headers = ['id', 'title', 'body'];
 
     for (let index of headers) {
         let tHead = document.createElement('th');
@@ -40,7 +40,7 @@ function appendPosts() {
             tRow.style.border = 'solid black 2px';
             tBody.appendChild(tRow);
 
-            let records = [post.userId, post.id, post.title, post.body];
+            let records = [post.id, post.title, post.body];
             for (let record of records) {
                 let tData = document.createElement('td');
                 tData.style.border = 'solid black 2px';
