@@ -3,32 +3,33 @@
 // Sukurti masyvą, kuris aprašytų knygos duomenis: title, author, year, genre
 
 $book1 = [
-    'The Hobbit',
-    'J. R. R. Tolkien',
-    1937,
-    'Fantasy'
+    'Title' => 'The Hobbit',
+    'Author' => 'J. R. R. Tolkien',
+    'Year' => 1937,
+    'Genre' => 'Fantasy'
 ];
 
 // Sukurti masyvą, kurio elementai būtų masyvai aprašantys knygas. Minimum 3.
 
 $books = [
     $book1,
-    ['Harry Potter and the Philosopher\'s Stone',
-    'J. K. Rowling',
-    1997,
-    'Fantasy'
+    [
+    'Title' => 'Harry Potter and the Philosopher\'s Stone',
+    'Author' => 'J. K. Rowling',
+    'Year' => 1997,
+    'Genre' => 'Fantasy'
     ],
     [
-    'The Little Prince',
-    'Antoine de Saint-Exupéry',
-    1943,
-    'Novella'
+    'Title' => 'The Little Prince',
+    'Author' => 'Antoine de Saint-Exupéry',
+    'Year' => 1943,
+    'Genre' => 'Novella'
     ],
     [
-    'Dream of the Red Chamber',
-    'Cao Xueqin',
-    1800,
-    'Family saga'
+    'Title' => 'Dream of the Red Chamber',
+    'Author' => 'Cao Xueqin',
+    'Year' => 1800,
+    'Genre' => 'Family saga'
     ],
 
 ];
@@ -44,7 +45,7 @@ function getAverageYear($arr) {
     $yearsCollection = [];
 
     foreach ($arr as $year) {
-        $yearsCollection[] = $year[2];
+        $yearsCollection[] = $year['Year'];
     }
 
     $result = array_sum($yearsCollection)/count($yearsCollection);
