@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registracija į kursus</h1>
+    <hr>
+    <form action="form.php" method="post">
+        <ul>
+            <li>
+                <label for="first_name">Vardas:</label>
+                <input type="text" id="first_name" value="Benas" name="name">
+            </li>
+            <li>
+                <label for="last_name">Pavardė:</label>
+                <input type="text" id="last_name" value="Juskus" name="surname">
+            </li>
+            <li>
+                <label for="city">Miestas: </label>
+            <select name="city" id="city">
+                <option value="vilnius">Vilnius</option>
+                <option value="kaunas">Kaunas</option>
+                <option value="klaipeda">Klaipėda</option>
+            </select>
+            </li>
+            <h2>Programavimo kalba:</h2>
+            <li>
+                <label for="c_lang">C++</label>
+                <input type="checkbox" id="c_lang" name="c_lang">
+            </li>
+            <li>
+                <label for="php_lang">PHP</label>
+                <input type="checkbox" id="php_lang" name="php_lang">
+            </li>
+            <li>
+                <label for="python_lang">Python</label>
+                <input type="checkbox" id="python_lang" name="python_lang">
+            </li>
+            <h2>Papildoma informacija:</h2>
+            <li>
+                <textarea cols="50" rows="5" id="additional" name="content" placeholder="Pvz. : Turite C++ programavimo patirties."></textarea>
+            </li>
+
+            <li>
+                <button type="submit">Siųsti</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
