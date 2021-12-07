@@ -1,8 +1,5 @@
 <?php
 
-// http://localhost:8081/2021-12-07/loadImage.php?date=2021-12-07&name=7ZHu1vQx6K2NdL01.png
-// http://localhost:8081/2021-12-07/loadImage.php?name=7ZHu1vQx6K2NdL01.png
-
 define('UPLOAD_DIR', '/home/code-academy/PHP/12-07/upload');
 
 if (isset($_GET['name'])) {
