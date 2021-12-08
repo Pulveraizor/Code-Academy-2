@@ -11,27 +11,27 @@
     <div class="container">
         <div class="card" style="width: 35rem">
             <div class="card-header">
-                <h2>Uzpildykite forma apie save:</h2>
+                <h3>Užpildykite formą apie save:</h3>
             </div>
             <div class="card-body px-5">
                 <form class="row g-3" action="profile.php" method="post" enctype="multipart/form-data">
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Vardas:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" value="Benas" name="name">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="Bill" name="name">
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Pavardė:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" value="Juskus" name="surname">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="Gates" name="surname">
                       </div>
                       <label for="exampleFormControlInput1">Pasirinkite savo miesta:</label>
                       <select class="form-select" aria-label="Default select example" id="exampleFormControlInput1" name="city">
+                        <option value="klaipeda">Klaipėda</option>
                         <option value="vilnius">Vilnius</option>
                         <option value="kaunas">Kaunas</option>
-                        <option value="klaipeda">Klaipėda</option>
                       </select>
                 
-                    <h2>Programavimo kalbos:</h2>
+                    <h4>Programavimo kalbos, kurias mokate:</h4>
 
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="C++" id="flexCheckDefault" name="lang[]">
@@ -51,8 +51,8 @@
                             Python
                         </label>
                     </div>
-            
-                    <h2>Papildoma informacija:</h2>
+                    <hr>
+                    <h4>Papildoma informacija:</h4>
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Papasakokite daugiau apie save:</label>
@@ -62,7 +62,7 @@
     
 
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Prisekite savo nuotrauka:</label>
+                        <label for="formFile" class="form-label">Prisekite savo nuotrauką:</label>
                         <input class="form-control" type="file" id="formFile" name="image">
                         </div>
                 

@@ -16,31 +16,41 @@ require_once('upload.php');
 </head>
 <body>
 	<div class="container">
-		<div class="card mt-5" style="width: 35rem">
+		<div class="card mt-5" >
 			<div class="card-header">
-				<h3 class="card-title">Kandidatas: <?php echo $_POST['name'] . ' ' . $_POST['surname']; ?></h3>
+				<h3 class="card-title">Kandidato informacija</h3>
 			</div>
-			<div class="card-body">
-				<img class="card-img-top" src="http://localhost/12-07/loadimage.php?name=<?php echo $name. '.' .$ext; ?>" alt="image">
-				<div class="row mt-5">
-				<h5>Miestas: <?php echo $_POST['city'] ?></h4>
+			<div class="row card-body">
+				<div class="col-6">
+				<img class="img-fluid img-thumbnail" src="http://localhost/12-07/loadimage.php?name=<?php echo $name. '.' .$ext; ?>" alt="image">
 				</div>
-				<hr>
-				<div class="row mt-2 mx-3">
-				<h4>Mano Kalbos</h3>
-				<ul>
-					<?php $checkboxes = $_POST['lang'];
-					foreach ($checkboxes as $skill) {
-						if ($skill) {
-							echo "<li>$skill</li>";
-						}
-					} ?>
-				</ul>
-				</div>
-				<hr>
-				<div class="row mt-2">
-				<h5 class="card-title">Daugiau apie mane:</h3>
-				<p class="card-text"><?php echo $_POST['additional'] ?></p>
+				<div class="col-6">
+					<div class="mt-5">
+						<strong>Vardas: </strong><span><?php echo $_POST['name'];?></span>
+					</div>
+					<div>
+						<strong>Pavardė: </strong><span><?php echo $_POST['surname'];?></span>
+					</div>
+					<div>
+						<strong>Miestas: </strong><span><?php echo $_POST['city']; ?></span>
+					</div>
+					<hr>
+					<div class="mt-2">
+						<strong>Kalbos, kurias moku:</strong>
+						<ul class="mx-3">
+							<?php $checkboxes = $_POST['lang'];
+							foreach ($checkboxes as $skill) {
+								if ($skill) {
+									echo "<li>$skill</li>";
+								}
+							} ?>
+						</ul>
+					</div>
+					<hr>
+					<div class="mt-2">
+						<strong class="card-title">Daugiau apie mane:</strong>
+						<p class="card-text"><?php echo $_POST['additional']; ?></p>
+					</div>
 				</div>
 			</div>
 			<div class="card-footer mt-4">
