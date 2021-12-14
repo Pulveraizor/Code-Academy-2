@@ -1,6 +1,6 @@
 <?php
 
-define('UPLOAD_DIR', '/home/code-academy/PHP/12-07/upload');
+define('UPLOAD_DIR', dirname(__FILE__) . '/upload');
 
 if (isset($_GET['name'])) {
 	$date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
