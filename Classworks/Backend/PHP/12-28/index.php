@@ -25,8 +25,6 @@ $customCar->setWheelsNumber(6);
 
 array_unshift($vehicles, $customCar);
 
-// var_dump($vehicles);
-
 foreach ($vehicles as $vehicle) {
     var_dump($vehicle);
     echo $vehicle->getFuelType() . '<br>';
