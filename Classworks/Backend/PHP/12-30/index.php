@@ -8,11 +8,11 @@ $student->setScholarship(450);
 $student->setCourse('Biology');
 
 $driver = new Driver('Petras', 22);
+$driver->setSalary(2746);
 $driver->setExp(28);
 $driver->setLicence('C');
 
-echo "{$student->getName()}, {$student->getAge()},  {$student->getCourse()}, {$student->getScholarship()}";
-echo '<br>';
-echo "{$driver->getName()}, {$driver->getAge()}, {$driver->getExp()}, {$driver->getLicence()}";
+var_dump($student);
+var_dump($driver);
 
 
