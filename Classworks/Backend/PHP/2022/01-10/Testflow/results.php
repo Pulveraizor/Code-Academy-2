@@ -31,26 +31,30 @@ $score = [];
     <div class="container">
         <div class="results">
         <?php
-    foreach ($questions as $question) {
-        foreach ($ans as $key => $value) {
-            if ($question['id'] == $key && $question['correct'] == $value) {
-                $score[] = $key;
-                echo (new App\Classes\Tag('div'))->setAttr('style', 'color: green;')->setText("\"{$question['question']}\": correct")->show();
-                // echo "\"{$question['question']}\": correct";
-                
-            } if ($question['id'] == $key && $question['correct'] != $value) {
-                echo (new App\Classes\Tag('div'))->setAttr('style', 'color: red;')->setText("\"{$question['question']}\": wrong")->show();
-                // echo "\"{$question['question']}\": wrong";
-                
+            foreach ($questions as $question) {
+                foreach ($ans as $key => $value) {
+                    if ($question['id'] == $key && $question['correct'] == $value) {
+                        $score[] = $key;
+                        echo (new App\Classes\Tag('div'))
+                            ->setAttr('style', 'color: green;')
+                            ->setText("\"{$question['question']}\": correct")
+                            ->show();                        
+                    } 
+                    
+                    if ($question['id'] == $key && $question['correct'] != $value) {
+                        echo (new App\Classes\Tag('div'))
+                            ->setAttr('style', 'color: red;')
+                            ->setText("\"{$question['question']}\": wrong")
+                            ->show();    
+                    }
+                }
             }
-        }
-    }
-    ?>
-    <div class="total">
-    <?php
-    echo 'Total score for ' . $_SESSION['fname'] . ': ' . count($score) . ' out of ' . count($questions);
-    ?>
-    </div>
+        ?>
+        <div class="total">
+            <?php
+                echo 'Total score for ' . $_SESSION['fname'] . ': ' . count($score) . ' out of ' . count($questions);
+            ?>
+        </div>
         </div>
     </div>
     <div class="again">
