@@ -14,4 +14,3 @@ $driver->setLicence('C');
 var_dump($student);
 var_dump($driver);
 
-

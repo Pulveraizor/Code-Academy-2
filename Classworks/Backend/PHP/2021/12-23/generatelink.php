@@ -8,11 +8,9 @@ $link = filter_var($link, FILTER_SANITIZE_URL);
 if (empty($link)) {
     echo 'Please enter a URL';
     exit;
-} else if (filter_var($link, FILTER_VALIDATE_URL) !== false) {
-
-} else {
-echo "$link is not a valid URL";
-exit;
+} else if (filter_var($link, FILTER_VALIDATE_URL) == false) {
+    echo "$link is not a valid URL";
+    exit;
 }
 
 $obj = [uniqid() => $link];
@@ -20,6 +18,8 @@ $obj = [uniqid() => $link];
 file_put_contents('redirect.json', json_encode($obj));
 
 $_GET['link'] = array_keys($obj);
+
+$here = __DIR__;
 ?>
 
 <!DOCTYPE html>
