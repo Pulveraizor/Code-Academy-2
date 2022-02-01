@@ -1,0 +1,10 @@
+{
+    "name": "codeacademy/books",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "Api/",
+            "Router\\": "Router/"
+        }
+    }
+}

@@ -4,6 +4,8 @@ session_start();
 session_destroy();
 session_start();
 
+define('ROOT_PATH', dirname(__DIR__));
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
     <div class="container">

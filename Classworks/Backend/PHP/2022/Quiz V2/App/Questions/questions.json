@@ -1,0 +1,34 @@
+[
+    {
+        "question": "What does PHP stand for?",
+        "a": "PHP: Hypertext Preprocessor",
+        "b": "Private Home Page",
+        "c": "Personal Hypertext Processor",
+        "id": "first",
+        "correct": "a"
+    },
+    {
+        "question": "PHP server scripts are surrounded by delimiters, which?",
+        "a": "< & >...</&>",
+        "b": "< ? php>...</?>",
+        "c": "< script >...</script>",
+        "id": "second",
+        "correct": "b"
+    },
+    {
+        "question": "All variables in PHP start with which symbol?",
+        "a": "$",
+        "b": "!",
+        "c": "&",
+        "id": "third",
+        "correct": "a"
+    },
+    {
+        "question": "How do you write \"Hello World\" in PHP",
+        "a": " Document.Write(\"Hello World\");",
+        "b": "\"Hello World\";",
+        "c": "echo \"Hello World\";",
+        "id": "fourth",
+        "correct": "c"
+    }
+]
