@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', loadAllBooks());
 
 let all = document.querySelector('#all');
-let view = document.querySelectorAll('[data-btn-type="view"]');
 let viewModalBody = document.querySelector('#viewdetails div.modal-body');
 let deleteModalBody = document.querySelector('#deletebook div.modal-body');
 
