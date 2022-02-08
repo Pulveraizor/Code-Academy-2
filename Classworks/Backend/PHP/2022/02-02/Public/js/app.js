@@ -36,22 +36,22 @@ function loadAllBooks() {
           btnView.setAttribute('data-btn-type', 'view');
           btnView.setAttribute('data-bs-toggle', 'modal');
           btnView.setAttribute('data-bs-target', '#viewdetails');
-          btnView.setAttribute('onclick', `viewDetails(${book.isbn})`);
           btnView.innerHTML = '<i class="fas fa-eye"></i>';
+          btnView.addEventListener('click', function () {viewDetails(book.isbn);});
           let btnUpdate = document.createElement('button');
           btnUpdate.setAttribute('class', 'btn btn-secondary');
           btnUpdate.setAttribute('data-btn-type', 'update');
           btnUpdate.setAttribute('data-bs-toggle', 'modal');
           btnUpdate.setAttribute('data-bs-target', '#updatebook');
-          btnUpdate.setAttribute('onclick', `updateBook(${book.isbn})`);
           btnUpdate.innerHTML = '<i class="far fa-edit"></i>';
+          btnUpdate.addEventListener('click', function() {updateBook(book.isbn);});
           let btnDelete = document.createElement('button');
           btnDelete.setAttribute('class', 'btn btn-danger');
           btnDelete.setAttribute('data-btn-type', 'delete');
           btnDelete.setAttribute('data-bs-toggle', 'modal');
           btnDelete.setAttribute('data-bs-target', '#deletebook');
-          btnDelete.setAttribute('onclick', `deleteBook(${book.isbn})`);
           btnDelete.innerHTML = '<i class="far fa-trash-alt"></i>';
+          btnDelete.addEventListener('click', function() {deleteBook(book.isbn);});
           all.append(tr);
           tr.append(th);
           tr.append(title);
@@ -70,45 +70,33 @@ function loadAllBooks() {
     });
 }
 
-// function viewDetails(isbn) {
-//   fetch(`../Src/retrieveSingle.php?=${isbn}`).then(
-//     function(response) {
-//       if (response.status !== 200) {
-//         console.log('Looks like there was a problem. Status Code: ' +
-//           response.status);
-//         return;
-//       }
-
-//       response.json().then(function(data) {
-//         console.log(data);
-//         }
-//       );
-//     }
-//   )
-//   .catch(function(err) {
-//     console.log('Fetch Error :-S', err);
-//   });
-// }
-
 function viewDetails(isbn) {
-  function reqListener() {
-    let book = JSON.parse(this.response);
-    let isbnView = document.querySelector('#isbnView');
-    isbnView.innerText = book.isbn;
-    let titleView = document.querySelector('#titleView');
-    titleView.innerText = book.title;
-    let authorView = document.querySelector('#authorView');
-    authorView.innerText = book.author;
-    let genreView = document.querySelector('#genreView');
-    genreView.innerText = book.genre;
-    let yearView = document.querySelector('#yearView');
-    yearView.innerText = book.year;
-  }
+  fetch(`../Src/retrieveSingle.php?isbn=${isbn}`).then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
 
-  let req = new XMLHttpRequest();
-  req.addEventListener("load", reqListener);
-  req.open("GET", `../Src/retrieveSingle.php?isbn=${isbn}`);
-  req.send();
+      response.json().then(function(book) {
+        let isbnView = document.querySelector('#isbnView');
+        isbnView.innerText = book.isbn;
+        let titleView = document.querySelector('#titleView');
+        titleView.innerText = book.title;
+        let authorView = document.querySelector('#authorView');
+        authorView.innerText = book.author;
+        let genreView = document.querySelector('#genreView');
+        genreView.innerText = book.genre;
+        let yearView = document.querySelector('#yearView');
+        yearView.innerText = book.year;
+        }
+      );
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
 }
 
 function addBook() {
@@ -125,7 +113,7 @@ function addBook() {
   data.append('genre', genre);
   data.append('year', year);
   data.append('isbn', isbn);
-  req.addEventListener('load', window.location.reload());
+  req.addEventListener('load', function() {loadAllBooks()});
   req.open("POST", '../Src/create.php');
   req.send(data);
 }
@@ -138,7 +126,7 @@ function deleteBook(isbn) {
     let req = new XMLHttpRequest();
     let data = new FormData();
     data.append('isbn', isbn);
-    req.addEventListener('load', window.location.reload());
+    req.addEventListener('load', function() {loadAllBooks()});
     req.open("POST", '../Src/delete.php');
     req.send(data);
   })
@@ -165,6 +153,7 @@ function updateBook(isbn) {
   req.addEventListener("load", reqListener);
   req.open("GET", `../Src/retrieveSingle.php?isbn=${isbn}`);
   req.send();
+  console.log('update request for' + isbn);
 
   let submitUpdate = document.getElementById('submitUpdate');
   submitUpdate.addEventListener('click', function () {
@@ -176,8 +165,9 @@ function updateBook(isbn) {
     data.append('genre', genreUpdate.value);
     data.append('year', yearUpdate.value);
     data.append('isbn', isbnUpdate.value);
-    req.addEventListener('load', window.location.reload());
+    req.addEventListener('load', function() {loadAllBooks()});
     req.open("POST", '../Src/update.php');
     req.send(data);
+    console.log('updated');
   })
 }
