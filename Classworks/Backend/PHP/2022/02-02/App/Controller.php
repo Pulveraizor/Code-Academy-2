@@ -9,6 +9,7 @@ class Controller {
         self::$user,
         self::$pwd
     );
+    
 
     public function getAllBooks() {
         $retrieve = "SELECT * FROM books";
